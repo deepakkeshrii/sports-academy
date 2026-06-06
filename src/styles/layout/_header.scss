@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.site-header {
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  z-index: 50;
+  background: #fff;
+
+  &__logo {
+    height: 38px;
+    width: auto;
+    filter: invert(1);
+    mix-blend-mode: multiply;
+
+    @include up($lg) {
+      height: 42px;
+    }
+  }
+}

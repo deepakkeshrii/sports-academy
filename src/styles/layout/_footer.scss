@@ -1,0 +1,136 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.site-footer {
+  background: #fff;
+
+  &__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 1.5rem;
+
+    @include up($sm) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include up($md) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    a {
+      color: $ink;
+      text-decoration: none;
+      text-transform: capitalize;
+      font-size: 1rem;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $lime;
+      }
+    }
+  }
+
+  &__rule {
+    margin: 2.5rem 0;
+    border: 0;
+    border-top: 1px solid $line;
+    opacity: 1;
+  }
+
+  &__logo {
+    height: 56px;
+    width: auto;
+    filter: invert(1);
+    mix-blend-mode: multiply;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: $font-display;
+    font-weight: 500;
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    color: $lime;
+  }
+
+  &__address {
+    font-style: normal;
+    margin-top: 1rem;
+
+    p {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0 0 0.5rem;
+      font-size: 1rem;
+      text-transform: capitalize;
+      color: $ink;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        color: $lime;
+      }
+
+      &[href^='mailto'] {
+        text-transform: none;
+      }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    a {
+      color: $ink;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $lime;
+      }
+    }
+
+    svg {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+
+  &__bar {
+    background: linear-gradient(to right, $navy-deep, $navy);
+    color: #fff;
+    font-size: 13px;
+
+    a {
+      color: rgba(#fff, 0.9);
+      text-decoration: none;
+      text-transform: capitalize;
+
+      &:hover {
+        color: $lime-bright;
+      }
+    }
+  }
+
+  &__copy {
+    text-align: center;
+
+    a {
+      text-transform: lowercase;
+    }
+  }
+}
+
+.footer__icon {
+  flex: none;
+  width: 1rem;
+  height: 1rem;
+  color: $lime;
+}

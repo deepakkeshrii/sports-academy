@@ -1,0 +1,90 @@
+@use '../abstracts/variables' as *;
+
+.btn-ssa {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  border-radius: 50px;
+  background: $lime;
+  color: #fff;
+  padding: 0.7rem 1.75rem;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background: $lime-bright;
+    color: $ink;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba($lime, 0.35);
+  }
+}
+
+.btn-ssa-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid $lime-bright;
+  border-radius: 50px;
+  background: transparent;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: capitalize;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    background: $lime;
+    border-color: $lime;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+}
+
+.btn-ssa-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $lime-bright;
+  }
+
+  &__arrow {
+    font-size: 1.15rem;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover &__arrow {
+    transform: translateX(4px);
+  }
+}
+
+.btn-contact {
+  border: 1px solid $lime-bright;
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $ink;
+  background: transparent;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background: $lime;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+}
