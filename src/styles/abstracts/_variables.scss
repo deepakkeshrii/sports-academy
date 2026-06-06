@@ -1,0 +1,22 @@
+// Brand colours
+$lime: #99b81b;
+$lime-bright: #d1f04f;
+$lime-soft: #c4dd57;
+$navy: #003a5d;
+$navy-deep: #002f50;
+
+$ink: #111;
+$muted: #6b6b6b;
+$line: #e3e3e3;
+$bg-soft: #f6f7f2;
+$tab-idle: #c1c1c1;
+
+// Fonts come from next/font (defined on <html>)
+$font-sans: var(--font-inter), 'Helvetica Neue', Arial, sans-serif;
+$font-display: var(--font-poppins), 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+
+// Breakpoints (aligned with Bootstrap)
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;

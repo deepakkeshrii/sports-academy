@@ -1,0 +1,41 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-sans;
+  color: $ink;
+  background: #fff;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-display;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.ssa-container {
+  @include container;
+}
+
+.section-head {
+  margin-bottom: 2.5rem;
+}
+
+.accent-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+  border-radius: 50%;
+  background: $lime;
+  vertical-align: middle;
+}

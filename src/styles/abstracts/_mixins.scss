@@ -1,0 +1,27 @@
+@use 'variables' as *;
+
+@mixin up($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+
+@mixin down($bp) {
+  @media (max-width: ($bp - 0.02px)) {
+    @content;
+  }
+}
+
+@mixin container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+
+  @include up($sm) {
+    padding-inline: 2rem;
+  }
+  @include up($lg) {
+    padding-inline: 2.5rem;
+  }
+}
