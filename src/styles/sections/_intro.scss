@@ -1,0 +1,43 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.intro {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  padding-block: 4rem;
+
+  @include up($lg) {
+    padding-block: 6rem;
+  }
+
+  &__watermark {
+    position: absolute;
+    left: -2.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: $font-display;
+    font-weight: 800;
+    line-height: 1;
+    color: rgba($lime-bright, 0.3);
+    font-size: clamp(180px, 30vw, 360px);
+    pointer-events: none;
+  }
+
+  &__statement {
+    position: relative;
+    max-width: 48rem;
+    margin-inline: auto;
+    text-align: center;
+    font-family: $font-display;
+    font-weight: 400;
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    line-height: 1.6;
+    color: $ink;
+
+    strong {
+      font-weight: 700;
+      color: $lime;
+    }
+  }
+}
