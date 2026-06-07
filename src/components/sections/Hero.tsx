@@ -47,7 +47,7 @@ export default function Hero() {
       </div>
 
       <aside className="hero__widgets">
-        <StatusLabel>Weather<div className="hero__green-rule" /></StatusLabel>
+        <StatusLabel>Weather<span className="hero__green-rule" /></StatusLabel>
 
         <div className="hero__weather">
           <p className="hero__weather-place">Hunter Valley</p>
@@ -64,8 +64,8 @@ export default function Hero() {
 
         </div>
 
-        <StatusLabel>Ongoing Matches<div className="hero__green-rule" /></StatusLabel>
-        <StatusLabel>Score<div className="hero__green-rule" /></StatusLabel>
+        <StatusLabel>Ongoing Matches<span className="hero__green-rule" /></StatusLabel>
+        <StatusLabel>Score<span className="hero__green-rule" /></StatusLabel>
       </aside>
     </section>
   );

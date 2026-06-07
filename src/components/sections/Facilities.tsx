@@ -58,6 +58,7 @@ export default function Facilities() {
         <SectionHeading
           title="Facilities"
           subtitle="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
+          className='ssa-container'
         />
 
         <div className="facilities__bento">
