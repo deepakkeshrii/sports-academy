@@ -1,0 +1,69 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.cev-panel {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 280px;
+  overflow: hidden;
+
+  @include up($lg) {
+    min-height: 360px;
+  }
+
+  &--green {
+    background: linear-gradient(135deg, $lime, $lime-soft);
+  }
+
+  &__bg {
+    object-fit: cover;
+    transition: transform 0.7s ease;
+
+    &--faint {
+      opacity: 0.15;
+      mix-blend-mode: luminosity;
+    }
+  }
+
+  &:hover &__bg {
+    transform: scale(1.05);
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(#000, 0.85), rgba(#000, 0.45) 50%, rgba(#000, 0.3));
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    max-width: 28rem;
+    padding: 2rem;
+    color: #fff;
+
+    @include up($lg) {
+      padding: 3.5rem;
+    }
+
+    .btn-ssa-link {
+      margin-top: 1.25rem;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-family: $font-display;
+    font-weight: 700;
+    font-size: clamp(1.75rem, 3vw, 36px);
+  }
+
+  &__text {
+    margin: 0.75rem 0 0;
+    max-width: 24rem;
+    font-size: 1rem;
+    line-height: 23px;
+    color: rgba(#fff, 0.85);
+  }
+}

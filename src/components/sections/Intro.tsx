@@ -1,8 +1,10 @@
+import Image from 'next/image';
+
 export default function Intro() {
   return (
     <section className="intro">
-      <span className="intro__watermark" aria-hidden>
-        A
+      <span className="intro__watermark" aria-hidden="true">
+        <Image src="/Vector.svg" alt="" fill className="intro__watermark-svg" />
       </span>
       <div className="ssa-container">
         <p className="intro__statement">

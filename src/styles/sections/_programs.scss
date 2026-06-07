@@ -1,0 +1,54 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.programs {
+  background: #fff;
+  padding-block: 4rem;
+
+  @include up($lg) {
+    padding-block: 6rem;
+  }
+}
+
+.program-card {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: 10px;
+  overflow: hidden;
+
+  &__img {
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  &:hover &__img {
+    transform: scale(1.05);
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(#000, 0.8), rgba(#000, 0.25) 45%, transparent 75%);
+  }
+
+  &__body {
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    padding: 1.75rem;
+    text-align: center;
+    color: #fff;
+  }
+
+  &__name {
+    margin: 0;
+    font-family: $font-display;
+    font-weight: 500;
+    font-size: 1.75rem;
+  }
+
+  &__tag {
+    margin: 0.25rem 0 0;
+    font-size: 1rem;
+  }
+}

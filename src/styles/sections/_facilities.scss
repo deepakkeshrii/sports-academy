@@ -1,0 +1,149 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.facilities {
+  background: #fff;
+  padding-block: 4rem;
+
+  @include up($lg) {
+    padding-block: 6rem;
+  }
+
+  &__bento {
+    position: relative;
+    margin-top: 2.5rem;
+  }
+
+  &__band {
+    position: absolute;
+    inset-inline: 0;
+    top: 28%;
+    height: 48%;
+    z-index: 0;
+    border-radius: 10px;
+    background: linear-gradient(to right, $navy, $lime, $lime-soft);
+    display: none;
+
+    @include up($lg) {
+      display: block;
+    }
+  }
+
+  &__row {
+    position: relative;
+    z-index: 1;
+
+    &--offset {
+      margin-top: 2.5rem;
+    }
+  }
+}
+
+.facility-card {
+  &__media {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    border-radius: 10px;
+    overflow: hidden;
+
+    img {
+      transition: transform 0.5s ease;
+    }
+  }
+
+  &:hover &__media img {
+    transform: scale(1.05);
+  }
+
+  &__play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: rgba(#fff, 0.9);
+    box-shadow: 0 4px 8px rgba(#000, 0.15);
+    transition: transform 0.2s ease;
+  }
+
+  &:hover &__play {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  &__play-icon {
+    width: 0;
+    height: 0;
+    margin-left: 3px;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 11px solid $navy;
+  }
+
+  &__title {
+    margin: 1rem 0 0;
+    font-family: $font-display;
+    font-weight: 500;
+    font-size: clamp(1.5rem, 2.5vw, 28px);
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+  }
+
+  &__tag {
+    border-radius: 50px;
+    padding: 0.25rem 0.75rem;
+    font-size: 13px;
+  }
+
+  &__text {
+    margin: 0.75rem 0 0;
+    max-width: 24rem;
+    font-size: 1rem;
+    line-height: 23px;
+  }
+
+  &--on-green {
+    .facility-card__title,
+    .facility-card__text {
+      color: #fff;
+    }
+    .facility-card__tag {
+      background: #fff;
+      color: $ink;
+    }
+  }
+
+  &--on-white {
+    .facility-card__title,
+    .facility-card__text {
+      color: $ink;
+    }
+    .facility-card__tag {
+      background: $lime;
+      color: #fff;
+    }
+  }
+
+  // Band is hidden below lg, so keep the "on-green" cards readable on mobile.
+  @include down($lg) {
+    &--on-green {
+      .facility-card__title,
+      .facility-card__text {
+        color: $ink;
+      }
+      .facility-card__tag {
+        background: $lime;
+        color: #fff;
+      }
+    }
+  }
+}

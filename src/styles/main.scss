@@ -4,6 +4,17 @@
 @use 'layout/footer';
 
 @use 'components/buttons';
+@use 'components/section-heading';
+@use 'components/marquee';
 
 @use 'sections/hero';
 @use 'sections/intro';
+@use 'sections/quote';
+@use 'sections/about';
+@use 'sections/features';
+@use 'sections/glimpse';
+@use 'sections/programs';
+@use 'sections/launching';
+@use 'sections/professionals';
+@use 'sections/facilities';
+@use 'sections/coaches-events';

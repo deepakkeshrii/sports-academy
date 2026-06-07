@@ -1,0 +1,42 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.glimpse {
+  background: $bg-soft;
+  padding-bottom: 4rem;
+
+  @include up($lg) {
+    padding-bottom: 6rem;
+  }
+
+  &__frame {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 10px;
+
+    img {
+      transition: transform 0.5s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+
+    &--tall {
+      aspect-ratio: 4 / 3;
+    }
+
+    &--wide {
+      aspect-ratio: 16 / 10;
+    }
+
+    @include up($lg) {
+      &--tall,
+      &--wide {
+        aspect-ratio: auto;
+        height: 462px;
+      }
+    }
+  }
+}
