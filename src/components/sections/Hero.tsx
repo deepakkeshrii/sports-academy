@@ -47,20 +47,25 @@ export default function Hero() {
       </div>
 
       <aside className="hero__widgets">
-        <StatusLabel>Weather</StatusLabel>
+        <StatusLabel>Weather<div className="hero__green-rule" /></StatusLabel>
 
         <div className="hero__weather">
           <p className="hero__weather-place">Hunter Valley</p>
-          <div className="hero__weather-temp">
+          <div className="hero__weather-temp justify-content-between">
+          <div className="position-relative">
             <span className="hero__weather-deg">19&deg;</span>
-            <span className="hero__weather-unit">C</span>
-          </div>
+            <span className="hero__weather-unit position-absolute top-0">C</span>
+            </div>
+          <div>
           <p className="hero__weather-label">Weather</p>
           <p className="hero__weather-time">Saturday, 8 pm</p>
+          </div>
+          </div>
+
         </div>
 
-        <StatusLabel>Ongoing Matches</StatusLabel>
-        <StatusLabel>Score</StatusLabel>
+        <StatusLabel>Ongoing Matches<div className="hero__green-rule" /></StatusLabel>
+        <StatusLabel>Score<div className="hero__green-rule" /></StatusLabel>
       </aside>
     </section>
   );

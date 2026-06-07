@@ -10,7 +10,7 @@ export default function CoachesEvents() {
         <div className="col-12 col-lg-6">
           <article className="cev-panel cev-panel--dark">
             <Image
-              src="/images/coaches.jpg"
+              src="/images/ourchoach.png"
               alt="Coaches running a training session"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"

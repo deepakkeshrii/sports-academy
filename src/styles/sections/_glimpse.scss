@@ -2,7 +2,7 @@
 @use '../abstracts/mixins' as *;
 
 .glimpse {
-  background: $bg-soft;
+  // background: $bg-soft;
   padding-bottom: 4rem;
 
   @include up($lg) {

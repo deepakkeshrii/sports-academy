@@ -23,7 +23,7 @@ const BOTTOM: Facility[] = [
 
 function FacilityCard({ facility }: { facility: Facility }) {
   return (
-    <div className="col-12 col-md-6">
+    <div className="col-12 col-md-6 custon-col-facility">
       <article className={`facility-card facility-card--${facility.tone}`}>
         <div className="facility-card__media">
           <Image
@@ -54,7 +54,7 @@ function FacilityCard({ facility }: { facility: Facility }) {
 export default function Facilities() {
   return (
     <section id="facilities" className="facilities">
-      <div className="ssa-container">
+      <div>
         <SectionHeading
           title="Facilities"
           subtitle="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
@@ -62,12 +62,12 @@ export default function Facilities() {
 
         <div className="facilities__bento">
           <div className="facilities__band" aria-hidden />
-          <div className="row g-4 facilities__row">
+          <div className="row custom-row g-4 facilities__row">
             {TOP.map((f) => (
               <FacilityCard key={f.title} facility={f} />
             ))}
           </div>
-          <div className="row g-4 facilities__row facilities__row--offset">
+          <div className="row custom-row g-4 facilities__row facilities__row--offset">
             {BOTTOM.map((f) => (
               <FacilityCard key={f.title} facility={f} />
             ))}

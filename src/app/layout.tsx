@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Inter, Poppins } from 'next/font/google';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@/styles/main.scss';
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+
+config.autoAddCss = false;
 
 const sans = Inter({
   subsets: ['latin'],

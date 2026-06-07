@@ -15,19 +15,19 @@ const tabs = [
     id: 'coaches',
     label: 'Coaches',
     heading: 'Our Coaches',
-    body: 'A team of internationally certified coaches, hitting partners and performance specialists who have worked alongside grand slam champions — dedicated to drawing out the best in every player.',
+    body: 'To be the first venue in the world to have 60 multi surface courts at one location and establish first one stop tennis academy in the Asia Pacific producing grand slam champions.',
   },
   {
     id: 'vision',
     label: 'Vision',
     heading: 'Our Vision',
-    body: 'To be recognised as the best tennis performance centre in the world — an environment built end to end for craft, shaping talent from across the Asia Pacific into champions.',
+    body: 'To be the first venue in the world to have 60 multi surface courts at one location and establish first one stop tennis academy in the Asia Pacific producing grand slam champions.',
   },
   {
     id: 'mission',
     label: 'Mission',
     heading: 'Our Mission',
-    body: 'To adopt, nurture and deliver players at every level through world-class coaching, facilities and pathways — making elite tennis accessible to the next generation.',
+    body: 'To be the first venue in the world to have 60 multi surface courts at one location and establish first one stop tennis academy in the Asia Pacific producing grand slam champions.',
   },
 ];
 

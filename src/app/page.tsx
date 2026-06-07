@@ -22,8 +22,10 @@ export default function Home() {
         <Intro />
         <About />
         <Quote />
-        <KeyFeatures />
-        <Glimpse />
+        <section className="ssa-bg-image">
+          <KeyFeatures />
+          <Glimpse />
+        </section>
         <Programs />
         <Marquee />
         <Launching />

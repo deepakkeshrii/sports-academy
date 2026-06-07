@@ -80,7 +80,7 @@
     margin-top: 1.5rem;
     padding: 0.5rem 1.5rem;
     border-radius: 6px;
-    background: rgba(#000, 0.25);
+    background: linear-gradient(90deg, rgba(205, 237, 78, 0) 3.45%, #D2F24F 50.62%, rgba(210, 242, 79, 0) 91.38%);
     backdrop-filter: blur(4px);
 
     p {
@@ -104,8 +104,8 @@
 
   &__widgets {
     position: absolute;
-    right: 1.5rem;
-    top: 50%;
+    right: 0;
+    top: 70%;
     z-index: 2;
     width: 253px;
     transform: translateY(-50%);
@@ -135,7 +135,6 @@
 
   &__weather {
     padding: 1.25rem;
-    border-radius: 12px;
     background: rgba($lime, 0.55);
     backdrop-filter: blur(4px);
   }
@@ -175,6 +174,13 @@
     margin: 0;
     font-size: 13px;
     color: rgba(#fff, 0.9);
+  }
+  &__green-rule {
+    display: block;
+    width: 20%;
+    height: 2px;
+    margin: 0;
+    background: $lime-bright;
   }
 }
 

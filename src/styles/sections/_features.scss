@@ -2,9 +2,9 @@
 @use '../abstracts/mixins' as *;
 
 .features {
-  position: relative;
-  overflow: hidden;
-  background: $bg-soft;
+  // position: relative;
+  // overflow: hidden;
+  // background: $bg-soft;
   padding-block: 4rem;
 
   @include up($lg) {

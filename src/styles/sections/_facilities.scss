@@ -4,6 +4,7 @@
 .facilities {
   background: #fff;
   padding-block: 4rem;
+  overflow: hidden;
 
   @include up($lg) {
     padding-block: 6rem;
@@ -20,7 +21,6 @@
     top: 28%;
     height: 48%;
     z-index: 0;
-    border-radius: 10px;
     background: linear-gradient(to right, $navy, $lime, $lime-soft);
     display: none;
 
@@ -32,17 +32,32 @@
   &__row {
     position: relative;
     z-index: 1;
-
-    &--offset {
-      margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    
+    @include up($lg) {
+      justify-content: center;
     }
+  }
+
+  &__row--offset {
+    margin-top: 2.5rem;
   }
 }
 
 .facility-card {
+  max-width: 500px;
+  margin: 0 auto;
+  
+  @include up($md) {
+    max-width: 100%;
+  }
+
   &__media {
     position: relative;
-    aspect-ratio: 16 / 10;
+    width: 100%;
+    max-width: 350px;
+    height: 350px;
     border-radius: 10px;
     overflow: hidden;
 
@@ -89,6 +104,7 @@
     font-family: $font-display;
     font-weight: 500;
     font-size: clamp(1.5rem, 2.5vw, 28px);
+    // text-align: center;
   }
 
   &__tags {
@@ -96,6 +112,7 @@
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-top: 0.75rem;
+    // justify-content: center;
   }
 
   &__tag {
@@ -105,10 +122,11 @@
   }
 
   &__text {
-    margin: 0.75rem 0 0;
+    margin: 0.75rem auto 0;
     max-width: 24rem;
     font-size: 1rem;
     line-height: 23px;
+    // text-align: center;
   }
 
   &--on-green {
@@ -145,5 +163,21 @@
         color: #fff;
       }
     }
+  }
+}
+.custom-row {
+  justify-content: center !important;
+}
+
+.custon-col-facility {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.custon-col-facility:last-child {
+  justify-content: flex-start !important;
+
+  .facility-card {
+    margin: 0;
   }
 }

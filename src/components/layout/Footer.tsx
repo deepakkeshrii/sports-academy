@@ -37,20 +37,8 @@ export default function Footer() {
   return (
     <footer className="site-footer" id="contact">
       <div className="ssa-container py-5">
-        <nav aria-label="Footer Navigation">
-          <ul className="site-footer__links">
-            {footerLinks.map((item) => (
-              <li key={item.label}>
-                <Link href={item.href}>{item.label}</Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        <hr className="site-footer__rule" />
-
-        <div className="row g-4 align-items-start">
-          <div className="col-lg-3 col-md-4">
+        <div className="row ">
+          <div className="col-lg-3 d-flex align-items-center justify-content-center">
             <Image
               src="/images/logo.jpg"
               alt="Signature Slam Academy Logo"
@@ -59,49 +47,62 @@ export default function Footer() {
               className="site-footer__logo"
             />
           </div>
+          <div className="col-lg-9">
+            <div className="row g-4 align-items-start">
+              <nav aria-label="Footer Navigation">
+                <ul className="site-footer__links">
+                  {footerLinks.map((item) => (
+                    <li key={item.label}>
+                      <Link href={item.href}>{item.label}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+              <hr className="site-footer__rule" />
+              <div className="col-lg-6 col-md-5">
+                <h3 className="site-footer__title">
+                  Signature Slam Academy
+                </h3>
 
-          <div className="col-lg-6 col-md-5">
-            <h3 className="site-footer__title">
-              Signature Slam Academy
-            </h3>
+                <address className="site-footer__address">
+                  <p>30 Wills Hill Road, Lovedale, NSW</p>
 
-            <address className="site-footer__address">
-              <p>30 Wills Hill Road, Lovedale, NSW</p>
+                  <p>
+                    <a href="tel:+915642589752">
+                      +91 5642589752
+                    </a>
+                  </p>
 
-              <p>
-                <a href="tel:+915642589752">
-                  +91 5642589752
-                </a>
-              </p>
+                  <p>
+                    <a href="mailto:info@ssagroup.com">
+                      info@ssagroup.com
+                    </a>
+                  </p>
+                </address>
+              </div>
 
-              <p>
-                <a href="mailto:info@ssagroup.com">
-                  info@ssagroup.com
-                </a>
-              </p>
-            </address>
-          </div>
+              <div className="col-lg-3 col-md-3">
+                <h3 className="site-footer__title">
+                  Connect With Us
+                </h3>
 
-          <div className="col-lg-3 col-md-3">
-            <h3 className="site-footer__title">
-              Connect With Us
-            </h3>
-
-            <div className="site-footer__socials">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href="#"
-                  aria-label={social.label}
-                >
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d={social.icon} />
-                  </svg>
-                </a>
-              ))}
+                <div className="site-footer__socials">
+                  {socialLinks.map((social) => (
+                    <a
+                      key={social.label}
+                      href="#"
+                      aria-label={social.label}
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d={social.icon} />
+                      </svg>
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
